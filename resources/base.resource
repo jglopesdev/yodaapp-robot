@@ -18,23 +18,23 @@ Start session
     
 Get started
     Wait Until Page Contains        ${START}        10
-    Click Text                      ${START}        5
+    Click Text                      ${START}        10
     
 Navigate to
     [Arguments]            ${item_text}
     ${hamburger}    Set Variable    xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
 
-    Wait Until Element Is Visible    ${hamburger}    5
+    Wait Until Element Is Visible    ${hamburger}    10
     Click Element                    ${hamburger}
     
     ${menu_item}    Set Variable    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]
 
-    Wait Until Element Is Visible    ${menu_item}    5
+    Wait Until Element Is Visible    ${menu_item}    10
     Click Element                    ${menu_item}    
 
 Go to item
     [Arguments]                      ${item}    ${checkpoint}
-    Wait Until Page Contains         ${item}    5
+    Wait Until Page Contains         ${item}    10
     Click Text                       ${item}
     Wait Until Page Contains         ${checkpoint}
     
