@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231125 16:59:03.890" rpa="false" schemaversion="4">
-<suite id="s1" name="Swipe" source="C:\Projetos\QAx\appium-qax\yodapp-robot\tests\swipe.robot">
-<test id="s1-t1" name="Deve poder remover o Darth Vader" line="7">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231130 18:18:31.835" rpa="false" schemaversion="4">
+<suite id="s1" name="Dragdrop" source="C:\Projetos\QAx\yodapp-robot\tests\dragdrop.robot">
+<test id="s1-t1" name="Deve arrastar o Skywalker e soltar no topo da lista" line="8">
 <kw name="Start session" library="base">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723</arg>
@@ -18,25 +18,25 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" starttime="20231125 16:59:04.168" endtime="20231125 16:59:12.987"/>
+<status status="PASS" starttime="20231130 18:18:32.082" endtime="20231130 18:18:44.408"/>
 </kw>
-<status status="PASS" starttime="20231125 16:59:04.167" endtime="20231125 16:59:12.987"/>
+<status status="PASS" starttime="20231130 18:18:32.082" endtime="20231130 18:18:44.408"/>
 </kw>
 <kw name="Get started" library="base">
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <arg>${START}</arg>
 <arg>10</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20231125 16:59:12.988" endtime="20231125 16:59:18.328"/>
+<status status="PASS" starttime="20231130 18:18:44.411" endtime="20231130 18:18:50.110"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${START}</arg>
 <arg>10</arg>
 <doc>Click text identified by ``text``.</doc>
-<msg timestamp="20231125 16:59:19.211" level="INFO">xpath criteria: //*[@text="QAX"]</msg>
-<status status="PASS" starttime="20231125 16:59:18.329" endtime="20231125 16:59:19.211"/>
+<msg timestamp="20231130 18:18:51.323" level="INFO">xpath criteria: //*[@text="QAX"]</msg>
+<status status="PASS" starttime="20231130 18:18:50.111" endtime="20231130 18:18:51.323"/>
 </kw>
-<status status="PASS" starttime="20231125 16:59:12.988" endtime="20231125 16:59:19.211"/>
+<status status="PASS" starttime="20231130 18:18:44.410" endtime="20231130 18:18:51.324"/>
 </kw>
 <kw name="Navigate to" library="base">
 <arg>Star Wars</arg>
@@ -44,147 +44,121 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <var>${hamburger}</var>
 <arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231125 16:59:19.213" level="INFO">${hamburger} = xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
-<status status="PASS" starttime="20231125 16:59:19.212" endtime="20231125 16:59:19.213"/>
+<msg timestamp="20231130 18:18:51.325" level="INFO">${hamburger} = xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<status status="PASS" starttime="20231130 18:18:51.325" endtime="20231130 18:18:51.325"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${hamburger}</arg>
 <arg>10</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20231125 16:59:20.443" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]
+<msg timestamp="20231130 18:18:52.841" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]
 xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
-<status status="PASS" starttime="20231125 16:59:19.213" endtime="20231125 16:59:20.443"/>
+<status status="PASS" starttime="20231130 18:18:51.325" endtime="20231130 18:18:52.841"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${hamburger}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20231125 16:59:20.445" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<msg timestamp="20231125 16:59:20.620" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
-<status status="PASS" starttime="20231125 16:59:20.444" endtime="20231125 16:59:20.620"/>
+<msg timestamp="20231130 18:18:52.845" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg timestamp="20231130 18:18:53.159" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<status status="PASS" starttime="20231130 18:18:52.842" endtime="20231130 18:18:53.159"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${menu_item}</var>
 <arg>xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231125 16:59:20.620" level="INFO">${menu_item} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
-<status status="PASS" starttime="20231125 16:59:20.620" endtime="20231125 16:59:20.620"/>
+<msg timestamp="20231130 18:18:53.160" level="INFO">${menu_item} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
+<status status="PASS" starttime="20231130 18:18:53.159" endtime="20231130 18:18:53.160"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${menu_item}</arg>
 <arg>10</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20231125 16:59:21.571" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
-<status status="PASS" starttime="20231125 16:59:20.621" endtime="20231125 16:59:21.571"/>
+<msg timestamp="20231130 18:18:54.118" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
+<status status="PASS" starttime="20231130 18:18:53.161" endtime="20231130 18:18:54.118"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${menu_item}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20231125 16:59:21.573" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]'.</msg>
-<msg timestamp="20231125 16:59:21.817" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
-<status status="PASS" starttime="20231125 16:59:21.571" endtime="20231125 16:59:21.817"/>
+<msg timestamp="20231130 18:18:54.130" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]'.</msg>
+<msg timestamp="20231130 18:18:54.571" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
+<status status="PASS" starttime="20231130 18:18:54.118" endtime="20231130 18:18:54.571"/>
 </kw>
-<status status="PASS" starttime="20231125 16:59:19.212" endtime="20231125 16:59:21.817"/>
+<status status="PASS" starttime="20231130 18:18:51.324" endtime="20231130 18:18:54.571"/>
 </kw>
 <kw name="Go to item" library="base">
 <arg>Lista</arg>
-<arg>Darth Vader</arg>
+<arg>Luke Skywalker</arg>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <arg>${item}</arg>
 <arg>10</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20231125 16:59:21.818" endtime="20231125 16:59:22.361"/>
+<status status="PASS" starttime="20231130 18:18:54.572" endtime="20231130 18:18:55.201"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${item}</arg>
 <doc>Click text identified by ``text``.</doc>
-<msg timestamp="20231125 16:59:22.880" level="INFO">xpath criteria: //*[contains(@text,"Lista")]</msg>
-<status status="PASS" starttime="20231125 16:59:22.361" endtime="20231125 16:59:22.880"/>
+<msg timestamp="20231130 18:18:55.683" level="INFO">xpath criteria: //*[contains(@text,"Lista")]</msg>
+<status status="PASS" starttime="20231130 18:18:55.201" endtime="20231130 18:18:55.683"/>
 </kw>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
 <arg>${checkpoint}</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20231125 16:59:22.880" endtime="20231125 16:59:24.626"/>
+<status status="PASS" starttime="20231130 18:18:55.684" endtime="20231130 18:18:57.921"/>
 </kw>
-<status status="PASS" starttime="20231125 16:59:21.818" endtime="20231125 16:59:24.626"/>
-</kw>
-<kw name="Get Element Location" library="AppiumLibrary">
-<var>${positions}</var>
-<arg>xpath=//android.widget.TextView[@text="@darthvader"]/../../..//*[contains(@resource-id, "indicator")]</arg>
-<doc>Get element location</doc>
-<msg timestamp="20231125 16:59:24.826" level="INFO">Element 'xpath=//android.widget.TextView[@text="@darthvader"]/../../..//*[contains(@resource-id, "indicator")]' location: {'x': 970, 'y': 643} </msg>
-<msg timestamp="20231125 16:59:24.826" level="INFO">xpath criteria: //android.widget.TextView[@text="@darthvader"]/../../..//*[contains(@resource-id, "indicator")]</msg>
-<msg timestamp="20231125 16:59:24.826" level="INFO">${positions} = {'x': 970, 'y': 643}</msg>
-<status status="PASS" starttime="20231125 16:59:24.626" endtime="20231125 16:59:24.826"/>
+<status status="PASS" starttime="20231130 18:18:54.572" endtime="20231130 18:18:57.923"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
-<var>${start_x}</var>
-<arg>${positions}[x]</arg>
+<var>${origin}</var>
+<arg>xpath=//android.widget.TextView[@text="@skywalker"]/../../..//*[contains(@resource-id, "drag_handle")]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231125 16:59:24.827" level="INFO">${start_x} = 970</msg>
-<status status="PASS" starttime="20231125 16:59:24.827" endtime="20231125 16:59:24.827"/>
+<msg timestamp="20231130 18:18:57.923" level="INFO">${origin} = xpath=//android.widget.TextView[@text="@skywalker"]/../../..//*[contains(@resource-id, "drag_handle")]</msg>
+<status status="PASS" starttime="20231130 18:18:57.923" endtime="20231130 18:18:57.923"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
-<var>${start_y}</var>
-<arg>${positions}[y]</arg>
+<var>${target}</var>
+<arg>xpath=//android.widget.TextView[@text="@mando"]/../../..//*[contains(@resource-id, "drag_handle")]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231125 16:59:24.827" level="INFO">${start_y} = 643</msg>
-<status status="PASS" starttime="20231125 16:59:24.827" endtime="20231125 16:59:24.827"/>
+<msg timestamp="20231130 18:18:57.924" level="INFO">${target} = xpath=//android.widget.TextView[@text="@mando"]/../../..//*[contains(@resource-id, "drag_handle")]</msg>
+<status status="PASS" starttime="20231130 18:18:57.924" endtime="20231130 18:18:57.924"/>
 </kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${offset_x}</var>
-<arg>${positions}[x] - 650</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20231125 16:59:24.828" level="INFO">${offset_x} = 320</msg>
-<status status="PASS" starttime="20231125 16:59:24.828" endtime="20231125 16:59:24.828"/>
+<kw name="My Drag And Drop" library="extend">
+<arg>${origin}</arg>
+<arg>${target}</arg>
+<msg timestamp="20231130 18:18:58.236" level="FAIL">NoSuchElementException: Message: An element could not be located on the page using the given search parameters.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Projetos\QAx\yodapp-robot\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:87:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Projetos\QAx\yodapp-robot\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Projetos\QAx\yodapp-robot\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)</msg>
+<status status="FAIL" starttime="20231130 18:18:57.925" endtime="20231130 18:18:58.275"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${offset_y}</var>
-<arg>${positions}[y]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231125 16:59:24.829" level="INFO">${offset_y} = 643</msg>
-<status status="PASS" starttime="20231125 16:59:24.829" endtime="20231125 16:59:24.829"/>
-</kw>
-<kw name="Swipe" library="AppiumLibrary">
-<arg>${start_x}</arg>
-<arg>${start_y}</arg>
-<arg>${offset_x}</arg>
-<arg>${offset_y}</arg>
-<arg>1000</arg>
-<doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" starttime="20231125 16:59:24.829" endtime="20231125 16:59:26.157"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=com.qaxperience.yodapp:id/btnRemove</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20231125 16:59:26.159" level="INFO">Clicking element 'id=com.qaxperience.yodapp:id/btnRemove'.</msg>
-<msg timestamp="20231125 16:59:26.897" level="INFO">criteria is com.qaxperience.yodapp:id/btnRemove</msg>
-<status status="PASS" starttime="20231125 16:59:26.157" endtime="20231125 16:59:26.897"/>
-</kw>
-<kw name="Wait Until Page Does Not Contain" library="AppiumLibrary">
-<arg>Darth Vader</arg>
-<arg>10</arg>
-<doc>Waits until `text` disappears from current page.</doc>
-<status status="PASS" starttime="20231125 16:59:26.898" endtime="20231125 16:59:27.424"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231130 18:18:58.275" endtime="20231130 18:18:58.275"/>
 </kw>
 <kw name="Close session" library="base">
-<kw name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20231125 16:59:27.426" endtime="20231125 16:59:27.882"/>
+<status status="NOT RUN" starttime="20231130 18:18:58.276" endtime="20231130 18:18:58.276"/>
 </kw>
-<status status="PASS" starttime="20231125 16:59:27.426" endtime="20231125 16:59:27.882"/>
-</kw>
-<status status="PASS" starttime="20231125 16:59:04.167" endtime="20231125 16:59:27.882"/>
+<status status="FAIL" starttime="20231130 18:18:32.081" endtime="20231130 18:18:58.277">NoSuchElementException: Message: An element could not be located on the page using the given search parameters.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Projetos\QAx\yodapp-robot\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:87:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Projetos\QAx\yodapp-robot\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Projetos\QAx\yodapp-robot\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)</status>
 </test>
-<status status="PASS" starttime="20231125 16:59:03.892" endtime="20231125 16:59:27.884"/>
+<status status="FAIL" starttime="20231130 18:18:31.838" endtime="20231130 18:18:58.280"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Swipe">Swipe</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Dragdrop">Dragdrop</stat>
 </suite>
 </statistics>
 <errors>
